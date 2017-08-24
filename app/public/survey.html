@@ -1,0 +1,235 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+
+		<title>Find a new Friend!</title>
+		<meta name="author" content="Corey Stagner">
+		<meta name="description" content="Find a new Friend!">
+		
+		<!-- External Bootstrap Link -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+		<!-- BootSwatch External Link -->
+		<link rel="stylesheet" href="https://bootswatch.com/solar/bootstrap.min.css">
+
+		<!-- CSS External Link -->
+		<link rel="stylesheet" href="assets/style/style.css">
+
+		<!-- jQuery External Link -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+		<!-- Firebase External Link -->
+		<script src="https://www.gstatic.com/firebasejs/4.1.3/firebase.js"></script>
+
+		<!-- MomentJS External Link -->
+		<script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+  </head>
+  
+	<body>
+		<div class="container-fluid tall" id="pageWrap">
+			<div class="container" id="headWrap">
+				<div class="row">
+					<div class="container col-md-12 content text-center">
+						<h1>Find a new Friend!</h1>
+					</div>
+				</div>
+			</div><!-- end #headWrap -->
+
+			<div class="container bgWhite tall" id="bodyWrap">
+				<div class="row">
+					<div class="container col-md-12 content text-center">	
+						<div class="row">
+							<h2>Back to Home Screen</h2>
+							<a href="/"><button id="toIndex">Go Home</button></a>
+						</div>
+					</div>
+				</div>
+			
+				<h2>Survey Questions</h2>
+				<hr>
+				<h3><strong>About You</strong></h3>
+				<h4>Name (Required)</h4>
+				<input type="text" name="" id="name" class="textValue" required>
+				<h4>Link to Photo Image (Required)</h4>
+				<input type="text" name="" id="photo" class="textValue" required>
+				<hr>
+				<h3><strong>Question 1</strong></h3>
+				<h4>I really like CSS.</h4>
+				<select data-placeholder="" class="radioValue" id="q1">
+					<option value=""></option>
+					<option value="1">1 (Strongly Disagree)</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5 (Strongly Agree)</option>
+				</select>
+		
+				<h3><strong>Question 2</strong></h3>
+				<h4>I really like HTML</h4>
+				<select data-placeholder="" class="radioValue" id="q2">
+					<option value=""></option>
+					<option value="1">1 (Strongly Disagree)</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5 (Strongly Agree)</option>
+				</select>
+		
+				<h3><strong>Question 3</strong></h3>
+				<h4>I really like JavaScript</h4>
+				<select data-placeholder="" class="radioValue" id="q3">
+					<option value=""></option>
+					<option value="1">1 (Strongly Disagree)</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5 (Strongly Agree)</option>
+				</select>
+		
+				<h3><strong>Question 4</strong></h3>
+				<h4>I really like JQuery</h4>
+				<select data-placeholder="" class="radioValue" id="q4">
+					<option value=""></option>
+					<option value="1">1 (Strongly Disagree)</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5 (Strongly Agree)</option>
+				</select>
+		
+				<h3><strong>Question 5</strong></h3>
+				<h4>I really like React.js</h4>
+				<select data-placeholder="" class="radioValue" id="q5">
+					<option value=""></option>
+					<option value="1">1 (Strongly Disagree)</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5 (Strongly Agree)</option>
+				</select>
+		
+				<h3><strong>Question 6</strong></h3>
+				<h4>I really like mySQL</h4>
+				<select data-placeholder="" class="radioValue" id="q6">
+					<option value=""></option>
+					<option value="1">1 (Strongly Disagree)</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5 (Strongly Agree)</option>
+				</select>
+		
+				<h3><strong>Question 7</strong></h3>
+				<h4>I really like Node.js</h4>
+				<select data-placeholder="" class="radioValue" id="q7">
+					<option value=""></option>
+					<option value="1">1 (Strongly Disagree)</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5 (Strongly Agree)</option>
+				</select>
+		
+				<h3><strong>Question 8</strong></h3>
+				<h4>I really like Express.js</h4>
+				<select data-placeholder="" class="radioValue" id="q8">
+					<option value=""></option>
+					<option value="1">1 (Strongly Disagree)</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5 (Strongly Agree)</option>
+				</select>
+		
+				<h3><strong>Question 9</strong></h3>
+				<h4>I really like Bootstrap</h4>
+				<select data-placeholder="" class="radioValue" id="q9">
+					<option value=""></option>
+					<option value="1">1 (Strongly Disagree)</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5 (Strongly Agree)</option>
+				</select>
+				
+				<h3><strong>Question 10</strong></h3>
+				<h4>I really like Alcohol</h4>
+				<select data-placeholder="" class="radioValue" id="q10">
+					<option value=""></option>
+					<option value="1">1 (Strongly Disagree)</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5 (Strongly Agree)</option>
+				</select>
+				<br>
+				<br>
+				<button type="submit" class="btn btn-primary btn-lg btn-block" id="submit"><i class="fa fa-check-circle" aria-hidden="true"></i> Submit
+				</button>
+			</div><!-- End #bodyWrap -->
+			
+			<!-- Modal -->
+			<!-- <div id="resultsModal" class="modal fade" role="dialog">
+				<div class="modal-dialog"> -->
+					<!-- Modal content-->
+					<!-- <div class="modal-content">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal">&times;</button>
+							<h2 class="modal-title"><strong>Best Match</strong></h2>
+						</div>
+						<div class="modal-body">
+							<h2 id="matchName"></h2>
+							<img id="matchImg" src="http://via.placeholder.com/300.png/09f/fff" alt="">
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+						</div>
+					</div>
+				</div>
+			</div> -->
+			<!-- End Modal -->
+
+			<div class="container-fluid" id="footWrap">
+			
+				<p><a href="/api/friends">API Table Link</a></p>
+			
+			</div><!-- End #footWrap -->
+		</div><!-- End #pageWrap -->
+
+		<script type="text/javascript">
+			// When User Submits
+			$("#submit").on("click", function(){
+				event.preventDefault();
+				// isValid = false;
+
+				// // Makes sure that all answers are valid
+				// function validateForm() {
+				// 	var isValid = true;
+				// 	// Checks Text Input Fields Value
+				// 	$('.textValue').each(function() {
+				// 		if ($(this).val() === "")
+				// 			isValid = false;
+				// 	});
+				// 	$('.radioValue').each(function() {
+				// 		if ($(this).val() === "")
+				// 			isValid = false;
+				// 	})
+				// 	return isValid;
+				// }// end validateForm()
+				// if(isValid === true){
+				// 	// Turns input into object
+				var inputData = {
+					name: $("#name").val(),
+					photo: $("#photo").val(),
+					scores: [$("#q1").val(), $("#q2").val(), $("#q3").val(), $("#q4").val(), $("#q5").val(), $("#q6").val(), $("#q7").val(), $("#q8").val(), $("#q9").val(), $("#q10").val(), ]
+				}
+				console.log(inputData);
+				$.post("/api/friends", inputData, function(data) {
+					console.log(data);
+				});
+			})
+		</script>
+			
+	</body>
+</html>

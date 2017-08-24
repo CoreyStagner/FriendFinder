@@ -1,0 +1,15 @@
+/* Elements */
+body{
+  height: 100%;
+}
+
+/* Classes */
+.bgWhite{
+  background-color: #ffffff;
+}
+
+.tall{
+  height: 100%;
+}
+
+/* ID's */
