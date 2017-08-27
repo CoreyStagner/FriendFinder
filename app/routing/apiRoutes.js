@@ -31,9 +31,10 @@ module.exports = function(app){
 			photo: "",
 			friendDifference: 0
 		};
-		
-		for (var i=0; i< friends.length; i++) {
 
+		// Loop through all of the friends
+		for (var i=0; i< friends.length; i++) {
+			// Resets totalDifference back to 0
 			totalDifference = 0;
 
 			// Loop through all the scores of each friend
@@ -56,7 +57,6 @@ module.exports = function(app){
 		// Finally save the user's data to the database (this has to happen AFTER the check. otherwise,
 		// the database will always return that the user is the user's best friend).
 		friends.push(input);
-		console.log("All friends are: " + friends);
 		// Return a JSON with the user's bestMatch. This will be used by the HTML in the next page. 
 		res.json(bestMatch);
 		console.log("Best Friend is " + bestMatch.name);
