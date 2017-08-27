@@ -1,8 +1,11 @@
+console.log("apiRoutes.js Opened");
+
 ///////////////////////////////////////////////
 // Requires
 ///////////////////////////////////////////////
 
 var friends = require('../data/friends.js');
+var path = require('path');
 
 ///////////////////////////////////////////////
 // Functions
@@ -17,22 +20,19 @@ module.exports = function(app){
 
 	// API POST Requests
 	app.post("/api/friends", function(req, res){
-
 		// Initial Variables
 		var input 	= req.body;
 		var userName 	= input.name;
 		var userPhoto 	= input.photo;
 		var userScores 	= input.scores;
-		
 		var totalDifference = 0;
-		
 		var bestMatch = {
 			name: "",
 			photo: "",
 			friendDifference: 0
 		};
 		
-		for  (var i=0; i< friends.length; i++) {
+		for (var i=0; i< friends.length; i++) {
 
 			totalDifference = 0;
 
@@ -56,10 +56,9 @@ module.exports = function(app){
 		// Finally save the user's data to the database (this has to happen AFTER the check. otherwise,
 		// the database will always return that the user is the user's best friend).
 		friends.push(input);
-
+		console.log("All friends are: " + friends);
 		// Return a JSON with the user's bestMatch. This will be used by the HTML in the next page. 
 		res.json(bestMatch);
 		console.log("Best Friend is " + bestMatch.name);
 	});
-
-}
+};

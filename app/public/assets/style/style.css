@@ -12,4 +12,8 @@ body{
   height: 100%;
 }
 
+.modal-backdrop{
+  z-index:0;
+}
+
 /* ID's */
